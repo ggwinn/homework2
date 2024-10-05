@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Accessibility Course Overview </title>
+  <link rel="stylesheet" href="project2.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="project2.js"></script>
+</head>
+<body>
+
+<div class="offscreen"></div>
+<div class="container">
+
+<div id="home"></div>
+<nav role="navigation" aria-label="navigation">
+  <a href="#home">
+    <img src="home.png" alt="Home"></a>
+  <a href="#links">
+    <img src="links.png" alt="Links"></a>
+    <a href="#signup">
+      <img src="signup.png" alt="Sign Up"></a>
+</nav>
+</div>
+
+<header role="banner" aria-label="accessibilitybanner">
+<div id="accessibilitybanner"> <img src="newbanner.png" alt="accessibilitybanner"> </div>
+</header>
+
+
+<main role="main" aria-label="main content">
+<h1> Main Content </h1>
+<div class ="container">
+<video width="480" height="360" id="thevideo">
+  <source src="employment-movie.mp4" type="video/mp4">
+  <track label="English" src="employment-movie.vtt" kind="subtitles" srclang="en" default>
+</video>
+<div id="videoplayer">
+</div>
+ <a href="employment-movie.mp4"><img width="50px" height="50px" src="play.png" alt="Employment Video"></img></a>
+</div>
+
+<div id="links" class="heading2"> <h2> Links </h2></div>
+<img src="dot.png" alt="dot">&nbsp;<a href="https://barnard.edu/disabilityservices/event-accessibility">Accessibility Research at Barnard</a><br>
+<img src="dot.png" alt="dot">&nbsp;<a href="https://www.hamilton.edu/offices/dos/accessibility">Disability Services at Hamilton</a><br>
+<img src="dot.png" alt="dot">&nbsp;<a href="https://xkcd.com/">XKCD</a><br>
+<img src="dot.png" alt="dot">&nbsp;<a href="https://www.youtube.com/watch?v=HtTyRajRuyY">A11ycasts Videos</a> 
+
+
+<div id="signup" class="heading2"> <h2>Sign Up!</h2></div>
+<form id="signupform">
+<p>
+  <label for="fname"> First: <input type="text" size="15" id="fname" name="fname"> </label>
+
+  <label for="mi"> MI: <input type="text" size="5" id="mi" name="mi" ></label>
+
+  <label for="lname"> Last: <input type="text" size="15" id="lname" name="lname"></label>
+</form>
+</p>
+<p>
+  <label for="em">Email:</label> <input id="em" name="em" type="text" size="30">
+</p>
+<p>
+  <span id="spamtext">Would you like to receive occassional emails with offers from us?</span>
+  <div id="receivespambutton">
+    <a href="#" id="receivespambutton" role="checkbox" aria-checked="false" tabindex="0">
+      <img src="checked.png" alt="checkbox">
+    </a>
+  </div>
+  <input type="hidden" 
+  name="spamyn" id="spamyn" value="n">
+</p>
+<p>
+
+  <h3><label for="commenting"> Comments:</label></h3>
+<input type="text" id="commenting" rows="5" cols="40" name="commenting">
+</br>
+ <button type="signupbutton" value="Sign Up!" aria-label="signupbutton" onclick="alert('Thank you for signing up!')" id="signupbutton" alt="Sign Up Button">Sign Up!</button>
+</form>
+</p>
+</main>
+</div><!-- end div.container -->
+</body>
+</html>
